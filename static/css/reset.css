@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+html
+{
+	font-size: 1.0em;
+}
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	line-height: 1.3;
+	font-family: 'Charter', serif;
+	color: black;
+	background-color: transparent;
+	border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+}
+
+body *
+{
+	box-sizing: border-box;
+	border-style: solid;
+	margin:0;
+	padding:0;
+	border-width: 0;
+
+	color: inherit;
+	background-color: inherit;
+	border-color: transparent;
+
+	font-family: inherit;
+	font-size: inherit;
+
+	overflow-wrap: break-word;
+    word-break: keep-all;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+
+	vertical-align: baseline;
+}
+
+input,
+select,
+textarea,
+div, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, main, 
+img, fieldset, form, table, article, aside, canvas, embed, 
+figure, figcaption, footer, header, 
+menu, nav, section, summary, audio, video, hr, ul, ol, legend, label
+{
+	width: 100%;
+    display: block;
+}
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='color']
+{
+     display: inline;
+     width: auto; 
+     margin-right: 0.2em;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label,
+input[type='color'] + label
+{
+    display: inline;
+}
+
+input[type='color']
+{
+    padding: 0;
+    width: 2em;
+    border-radius: 0;
+    vertical-align: bottom;
+}
+
+input, 
+form button,
+form select,
+form textarea, 
+pre,
+.terms
+{
+	padding: 0.5rem;
+	border-radius: 3px;
+	border-color: black;
+	border-width: 1px;
+}
+
+img,
+video,
+object
+{
+	border-color: #CCC;
+	border-width: 1px;
+}
+
+img
+{
+    simage-rendering: pixelated;
+    simage-rendering: crisp-edges;
+}
+
+input,
+select,
+textarea,
+pre,
+.terms
+{
+    font-family: 'Fira Mono', 'Courier', monospace;
+}
+
+ol, ul
+{
+	list-style: none;
+    list-style-position: inside;
+	display: block;
+	border-collapse: collapse;
+}
+
+li
+{
+    display: table-row;
+}
+
+li > *
+{
+	display: table-cell;
+	padding-right: 1em;
+}
+
+li[data-marker]:before
+{
+    display: table-cell;
+    padding-right: 0.5rem;
+    content: attr(data-marker);
+    text-align: right;
+}
+
+textarea
+{
+	resize: none;
+	overflow: hidden;
+	min-height: 10rem;
+    outline: none;
+}
+
+select
+{
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+button,
+*[role="button"]
+{
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    width: auto;   
+    sdisplay: inline-block; 
+}
+
+/* remove???? */
+form button
+{
+    margin-right: 1rem;
+}
+
+hr
+{
+	text-align: center;
+}
+
+hr:after
+{
+    content: '⁂';      /* ✻ is also a great choice*/
+}
+
+blockquote
+{
+    font-style: normal;
+    quotes: none;
+    text-indent: 2rem;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+	content: '';
+	content: none;
+}
+
+figure.block_quote
+{
+	padding-left: 3rem;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:active,
+button,
+*[role="button"]
+{
+	text-decoration: none;
+	color: blue;
+	font-style: italic;
+}
+
+a[href^="#"],
+a[href^="#"]:visited,
+a[href^="#"]:hover,
+a[href^="#"]:active
+{
+        color: red;
+        font-style: normal;
+}
+
+.ratio > *
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ratio
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.ratio:before
+{
+    content: '';
+    padding-top: 66.7%; /* 100% is also a great choice */
+    width: 10px; /* does it matter? should it be 100%? */
+    display: block;
+}
+
+/* is this the best way to indicate space taken? */
+object
+{
+  background-color: #EEE;
+}
+
+
+pre
+{
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word; 
+    font-size: 0.8em;
+}
+
+pre, textarea
+{
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+}
+
+h1, h2
+{
+    font-weight: bold;
+    color: inherit;
+	font-family: 'Neue Haas Grotesk', 'Helvetica Neue', 'Helvetica', san-serif;
+}
+
+h1
+{
+    font-size: 2.0em;
+    margin-top: 3em;
+}
+
+h2
+{
+    font-size: 1.0em;
+    margin-top: 3em;
+}
+
+figure > figcaption
+{
+     margin-top: 0.2em;
+     font-size: 0.8em;
+}
+
+figcaption
+{
+     font-size: 1.0em;
+}
+
+/* remove .button */
+figure, ul, ol, nav, menu, form, textarea, p, pre, hr, input, select, label, legend, button, .button
+{
+   margin-top: 1rem;
+}
+
+figure, ul, ol, nav, menu, form, textarea, p, pre, hr, h1, h2
+{
+	max-width: 32rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+ol > li,
+ul > li,
+figcaption > p,
+label + *,
+label > *
+{
+     margin-top: 0;
+}
+
+article
+{
+	margin-bottom: 10rem;
+}

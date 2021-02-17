@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8"></meta>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Protowrite Syntax</title>
+    	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"></link>
+    	<link rel="stylesheet" type="text/css" href="/static/css/custom.css"></link>
+    </head>
+	<body>
+		<div class="masthead">
+			<p>Protowrite</p>
+		</div>
+		<nav>
+			<ol><li><span><a href="/">Introduction</a></span></li><li><span><a href="/syntax.html">Syntax</a></span></li><li><span><a href="/philosophy.html">Philosophy</a></span></li></ol>
+		</nav>
+		<article>
+			<header><h1>The Protowrite syntax</h1></header><header><h2>Introduction</h2></header><p>The Protowrite syntax is a plain text syntax based on how people naturally write. It uses newlines and indents to differentiate elements like headings, paragraphs, and block quotes. It also supports images, audio, video, and embeded content. This guide covers all features of the Protowrite syntax.</p><header><h2>Headings</h2></header><p>Level one headings begin with three or more blank lines. Level two headings begin with two blank lines. Optionally, you can include captions under either.</p><p>Protowrite:</p><figure><pre>
+
+
+
+Level one heading
+A subtitle
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;header&gt;
+	&lt;h1&gt;Level one heading&lt;/h1&gt;
+	&lt;figcaption&gt;
+		&lt;p&gt;A subtitle&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/header&gt;
+</pre></figure><p>Protowrite:</p><figure><pre>
+
+
+Level two heading
+A subtitle
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;header&gt;
+	&lt;h2&gt;Level two heading&lt;/h2&gt;
+	&lt;figcaption&gt;
+		&lt;p&gt;A subtitle&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/header&gt;
+</pre></figure><header><h2>Paragraphs</h2></header><p>Paragraphs begin and end with blank lines, just like you'd expect.</p><p>Protowrite:</p><figure><pre>
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+
+The five boxing wizards jump quickly. The five boxing wizards jump quickly. The five boxing wizards jump quickly.
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;p&gt;The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;p&gt;The five boxing wizards jump quickly. The five boxing wizards jump quickly. The five boxing wizards jump quickly.&lt;/p&gt;
+</pre></figure><header><h2>Section breaks</h2></header><p>Section breaks signal a minor thematic shift in one's writing. To make a section break, type three or more asterisks, optionally separated by spaces. The section break must be preceded and followed by single blank lines.</p><p>Protowrite:</p><figure><pre>
+
+* * *
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;hr/&gt;
+</pre></figure><header><h2>Block quotes</h2></header><p>Block quotes are indicated by starting a line with a space. Optionally, you can add a caption for the quote.</p><p>Protowrite:</p><figure><pre>
+
+ Research your own experience; absorb what is useful, reject what is useless, and add what is essentially your own.
+Bruce Lee
+Tao of Jeet Kune Do
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;figure&gt;
+	&lt;blockquote&gt;
+		&lt;p&gt;Research your own experience; absorb what is useful, reject what is useless, and add what is essentially your own.&lt;/p&gt;
+	&lt;/blockquote&gt;
+	&lt;figcaption&gt;
+		&lt;p&gt;Bruce Lee&lt;/p&gt;
+		&lt;p&gt;Tao of Jeet Kune Do&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre></figure><header><h2>Code blocks</h2></header><p>Code blocks will be displayed as-is, preserving any whitespace. To create a code block, simply indent every line of code by one tab.</p><p>Protowrite:</p><figure><pre>
+
+	include &lt;stdio.h&gt;
+	function main(){
+		printf('Hello, World.');
+	}
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;figure&gt;
+&lt;pre&gt;
+include &lt;stdio.h&gt;
+function main(){
+	printf('Hello, World.');
+}
+&lt;/pre&gt;
+&lt;/figure&gt;
+</pre></figure><header><h2>Lists/Tables</h2></header><p>To make a list without markers, just write two or more lines of text separated by newlines. The output is an ordered list, because there's no such thing as an unordered list.</p><p>Protowrite:</p><figure><pre>
+
+Wake up
+Shower
+Get dressed
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;ol&gt;
+	&lt;li&gt;
+		&lt;span&gt;Wake up&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;Shower&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;Get dressed&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+</pre></figure><p>To make a list with markers, follow each marker by a single tab. Use extra spaces if you need to align the items.</p><p>Protowrite:</p><figure><pre>
+
+1.	Pen and paper
+2.	Typewriter
+3.	Computer
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;ol&gt;
+	&lt;li&gt;
+		&lt;span&gt;1.&lt;/span&gt;
+		&lt;span&gt;Pen and paper&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;2.&lt;/span&gt;
+		&lt;span&gt;Typewriter&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;3.&lt;/span&gt;
+		&lt;span&gt;Text editor&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+</pre></figure><p>If you want real bullet points, use real bullet points, not asterisks.</p><figure><pre>
+
+•	Read
+•	Write
+•	Edit
+
+</pre></figure><p>In fact, you can use any Unicode characters that you want for your list markers. Go crazy!</p><figure><pre>
+
+♠	Poker
+♣	Bridge
+♥	Blackjack
+♦	Rummy
+
+</pre></figure><p>Tables are just lists. Separate cells by single tabs. </p><p>Protowrite:</p><figure><pre>
+
+Selena	 Engineer	New York
+Justin	 Writer	        Lagos
+Lily	 Manager	Moscow
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;ol&gt;
+	&lt;li&gt;
+		&lt;span&gt;Selena&lt;/span&gt;
+		&lt;span&gt;Engineer&lt;/span&gt;
+		&lt;span&gt;New York&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;Justin&lt;/span&gt;
+		&lt;span&gt;Writer&lt;/span&gt;
+		&lt;span&gt;Lagos&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span&gt;Lily&lt;/span&gt;
+		&lt;span&gt;Manager&lt;/span&gt;
+		&lt;span&gt;Moscow&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+</pre></figure><header><h2>Citations</h2></header><p>Protowrite supports Vancouver style citation links. The citation IDs must be numbers and are enclosed in square brackets.</p><p>Protowrite:</p><figure><pre>
+
+Add Nineteen Eighty-Four [1] and The Machine Stops [2] to your reading list.
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;p&gt;Add Nineteen Eighty-Four &lt;a href="#[1]"&gt;[1]&lt;/a&gt; and The Machine Stops &lt;a href="#[2]"&gt;[2]&lt;/a&gt; to your reading list.&lt;/p&gt;
+</pre></figure><header><h2>A note about URLs</h2></header><p>All URLs must begin with http://, https://, or /.</p><header><h2>Links</h2></header><p>The syntax for web links also uses square brackets. Links follows the form [TEXT URL]. They can be included in paragraphs or lists.</p><p>Protowrite:</p><figure><pre>
+
+I don't have [Instagram https://instagram.com] or [Facebook https://facebook.com].
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;p&gt;I don't have &lt;a href="https://instagram.com"&gt;Instagram&lt;/a&gt; or &lt;a href="https://facebook.com"&gt;Facebook&lt;/a&gt;.&lt;/p&gt;
+</pre></figure><header><h2>Multimedia</h2></header><p>Protowrite allows you to include any type of web-compatible media in your documents. The syntax is identical for audio, images, video, and embedded content.</p><p>Protowrite:</p><figure><pre>
+
+/photos/mountains.jpg
+This is a caption.
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;figure&gt;
+	&lt;img src="/photos/mountains.jpg" /&gt;
+	&lt;figcaption&gt;
+		&lt;p&gt;This is a caption.&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre></figure><p>Protowrite:</p><figure><pre>
+
+https://youtube.com/embed/12345
+This is a caption.
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;figure&gt;
+	&lt;div class="ratio"&gt;
+		&lt;object data="https://youtube.com/embed/12345"&gt;&lt;/object&gt;
+	&lt;/div&gt;
+	&lt;figcaption&gt;
+		&lt;p&gt;This is a caption.&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre></figure><header><h2>Citation references</h2></header><p>Citation references are just items in an ordinary marked list. Mark each citation with a ID number inside of square brackets.</p><p>Protowrite:</p><figure><pre>
+
+[1]	George Orwell. Nineteen Eighty-Four. 1949.
+[2]	E. M. Forster. The Machine Stops. 1909.
+
+</pre></figure><p>HTML output:</p><figure><pre>
+&lt;ol&gt;
+	&lt;li id="[1]"&gt;
+		&lt;span&gt;[1]&lt;/span&gt;
+		&lt;span&gt;George Orwell. Nineteen Eighty-Four. 1949.&lt;/span&gt;
+	&lt;/li&gt;
+	&lt;li id="[2]"&gt;
+		&lt;span&gt;[2]&lt;/span&gt;
+		&lt;span&gt;E. M. Forster. The Machine Stops. 1909.&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;	
+</pre></figure><header><h2>Escapes</h2></header><p>In rare cases, you may need escapes.</p><p>Protowrite:</p><figure><pre>
+[L]
+[R]
+
+[/]
+[http://]
+[http:/]
+</pre></figure><p>HTML output:</p><figure><pre>
+[
+]
+
+/
+http:
+https:
+</pre></figure>
+		</article>
+	</body>
+</html>
