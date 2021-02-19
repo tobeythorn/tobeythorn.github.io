@@ -2,7 +2,7 @@
 <html>
 	<head>
     	<meta charset="utf-8"></meta>
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     	<title>Protowrite Syntax</title>
     	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"></link>
     	<link rel="stylesheet" type="text/css" href="/static/css/custom.css"></link>
@@ -12,17 +12,16 @@
 			<p>Protowrite</p>
 		</header>
 		<nav>
-			<ol><li><span><a href="/">Introduction</a></span></li><li><span><a href="/syntax.html">Syntax</a></span></li><li><span><a href="/philosophy.html">Philosophy</a></span></li></ol>
+			<ol><li><span><a href="/">Introduction</a></span></li><li><span><a href="/syntax.html">Syntax</a></span></li><li><span><a href="/philosophy.html">Philosophy</a></span></li><li><span><a href="/prepress.html">Prepress, a static site generator</a></span></li></ol>
 		</nav>
 		<main>
 			<article>
-				<header><h1>The Protowrite syntax</h1></header><header><h2>Introduction</h2></header><p>This guide covers all features of the Protowrite syntax. The use of newlines, tabs, and spaces to differentiate elements will feel familiar to anyone who has used a typewriter or plain text editor to write. Much of the syntax will also feel familiar to users of Markdown. What is likely to come as a surprise is what is absent.</p><p>There is virtually no markup. A Protowrite document contains only the exact words and symbols the author wishes to communicate. This makes Protowrite a joy to use. The one and only exception is the minimal notation used to specify links.</p><p>Protowrite asks writers to decide what each piece of text is, not what it looks like. By design, there is no way to mark a piece of text as bold or italic or purple. Instead, authors can decide if it is a heading, paragraph, list, quote, or link and the software will handle styling. At first, this may come as a shock, but in time, any discomfort will be replaced by a sense of freedom.</p><header><h2>Headings</h2></header><p>Level one headings begin with three or more blank lines. Level two headings begin with two blank lines. Optionally, you can include captions under either.</p><p>Protowrite:</p><figure><pre>
+				<header><h1>The Protowrite syntax</h1></header><header><h2>Introduction</h2></header><p>This guide covers all features of the Protowrite syntax. The use of newlines, tabs, and spaces to differentiate elements will feel familiar to anyone who has used a typewriter or plain text editor to write. Much of the syntax will also feel familiar to users of Markdown. What is likely to come as a surprise is what is absent.</p><p>First, Protowrite has virtually no markup. A Protowrite document contains only the exact words and symbols the author wishes to communicate. The one and only exception is the minimal notation used to specify links.</p><p>Second, Protowrite doesn't support elements like bold or italic. Protowrite asked authors to decide what something is, not what it looks like. This shifts the focus from “I want this to look bold” to “I want this to be a heading”.</p><header><h2>Headings</h2></header><p>Level one headings begin with three or more blank lines. Level two headings begin with two blank lines. Optionally, you can include captions under either.</p><p>Protowrite:</p><figure><pre>
 
 
 
 Level one heading
 A subtitle
-
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;header&gt;
 	&lt;h1&gt;Level one heading&lt;/h1&gt;
@@ -35,7 +34,6 @@ A subtitle
 
 Level two heading
 A subtitle
-
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;header&gt;
 	&lt;h2&gt;Level two heading&lt;/h2&gt;
@@ -54,7 +52,7 @@ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the 
 * * *
 
 </pre></figure><p>HTML output:</p><figure><pre>
-&lt;hr/&gt;
+&lt;hr /&gt;
 </pre></figure><header><h2>Block quotes</h2></header><p>Block quotes are indicated by starting a line with a space. Optionally, you can add a caption for the quote.</p><p>Protowrite:</p><figure><pre>
 
  Research your own experience; absorb what is useful, reject what is useless, and add what is essentially your own.

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8"></meta>
+    	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    	<title>Prepress</title>
+    	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"></link>
+    	<link rel="stylesheet" type="text/css" href="/static/css/custom.css"></link>
+    </head>
+	<body>
+		<header class="masthead">
+			<p>Protowrite</p>
+		</header>
+		<nav>
+			<ol><li><span><a href="/">Introduction</a></span></li><li><span><a href="/syntax.html">Syntax</a></span></li><li><span><a href="/philosophy.html">Philosophy</a></span></li><li><span><a href="/prepress.html">Prepress, a static site generator</a></span></li></ol>
+		</nav>
+		<main>
+			<article>
+				<header><h1>Prepress</h1></header><header><h2>Introduction</h2></header><p>Prepress is a simple static site generator writen in Python.</p><ol><li><span>•</span><span>Supports the Protowrite plain text syntax</span></li><li><span>•</span><span>Supports Front Matter</span></li><li><span>•</span><span>Supports root-relative links via //</span></li></ol><header><h2>Build and test a default site</h2></header><p>Download and unzip Prepress. Open terminal. Change directory to “prepress”. To build your site, enter the following command:</p><figure><pre>
+python3 prepress.py
+</pre></figure><p>To start a local test server, enter:</p><figure><pre>
+python3 -m http.server
+</pre></figure><p>To test your site, open your browser and enter:</p><figure><pre>
+localhost:8000
+</pre></figure><header><h2>Edit your site</h2></header><p>The Prepress directory structure is shown below.</p><figure><pre>
+prepress
+	└── pages
+	└── components
+	└── layouts
+	└── site
+		└── static
+			└── audio
+			└── css
+			└── images
+			└── scripts
+			└── video
+</pre></figure><p>Open index.zen in “pages”. Any plain text editor will do. Under “Introduction”, write a few words about your site. Save the file.</p><p>Now open masthead.zen in “components”. Change “My site” to the name you would like your site to have. You can change this in the future. Save it.</p><p>In terminal, rebuild your site:</p><figure><pre>
+python3 prepress.py
+</pre></figure><p>And in your browser go to:</p><figure><pre>
+localhost:8000
+</pre></figure><p>You should see the changes you just made.</p><header><h2>Deploy your site to the web</h2></header><p>To publish your site to the web, just upload the contents of your “site” directory to the root directory on your hosting service.</p><p>If your site will be hosted in a sub-directory, specify the base relative to the root when you build.</p><figure><pre>
+python3 prepress.py /project_1/
+</pre></figure><header><h2>Deploy your site to Github Pages</h2></header><p>Create an account at <a href="github.com">Github</a>.</p><p>Create a repository.</p><p>Change directory to protowrite_kit.</p><p>Open terminal. To generate your site type the following command, replacing “repository” with the name you chose for your repository.</p><figure><pre>
+python3 generator.py /repository/
+</pre></figure><p>Drag and drop the contents of your “site” directory into your repository on Github. Click commit.</p><p>On Github, click settings. Enable Github Pages.</p><p>To test your site, open your browser and type the following, replacing “username” and “repository” appropriately. Note that sometimes you must wait a couple minutes for your site to go live.</p><figure><pre>
+https://username.github.io/repository/
+</pre></figure>
+			</article>
+		</main>
+	</body>
+</html>
