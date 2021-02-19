@@ -5,7 +5,8 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     	<title>Prepress</title>
     	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"></link>
-    	<link rel="stylesheet" type="text/css" href="/static/css/custom.css"></link>
+    	<link rel="stylesheet" type="text/css" href="/static/css/theme.css"></link>
+		<link rel="stylesheet" type="text/css" href="{{ style }}"></link>
     </head>
 	<body>
 		<header class="masthead">
@@ -40,11 +41,11 @@ python3 prepress.py
 localhost:8000
 </pre></figure><p>You should see the changes you just made.</p><header><h2>Deploy your site to the web</h2></header><p>To publish your site to the web, just upload the contents of your “site” directory to the root directory on your hosting service.</p><p>If your site will be hosted in a sub-directory, specify the base relative to the root when you build.</p><figure><pre>
 python3 prepress.py /project_1/
-</pre></figure><header><h2>Or deploy your site to Github Pages</h2></header><p>Create an account at <a href="github.com">Github</a>. Create a repository called:</p><figure><pre>
+</pre></figure><header><h2>Deploy your site to Github Pages</h2></header><p>Create an account at <a href="github.com">Github</a>. Create a repository called:</p><figure><pre>
 username.github.io
-</pre></figure><p>Where “username” is your actual github username.</p><p>Drag and drop the contents of your “site” directory into your repository on Github. Click commit.</p><p>Open a browser and go to:</p><figure><pre>
+</pre></figure><p>Where “username” is your actual github username.</p><p>Drag and drop the contents of your “site” directory into your repository on Github. Click commit.</p><p>To view your site, open a browser and go to:</p><figure><pre>
 https://username.github.io/
-</pre></figure><p>Where “username” is your actual Github username. Note that sometimes you may need to wait a few minutes for Github to update changes to your site.</p>
+</pre></figure><p>Where “username” is your actual Github username. Note that you may need to wait a few minutes for Github to update changes to your site.</p>
 			</article>
 		</main>
 	</body>
