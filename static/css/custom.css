@@ -1,5 +1,5 @@
-.masthead
+.masthead > p
 {
-	font-weight: bold;
+	sfont-weight: bold;
 	font-family: 'Neue Haas Grotesk', 'Helvetica Neue', 'Helvetica', san-serif;
 }
