@@ -18,7 +18,7 @@
 			<article>
 				<header><h1>Prepress</h1></header><header><h2>Introduction</h2></header><p>Prepress is a simple static site generator writen in Python.</p><ol><li><span>•</span><span>Supports the Protowrite plain text syntax</span></li><li><span>•</span><span>Supports Front Matter</span></li><li><span>•</span><span>Supports root-relative links via //</span></li></ol><header><h2>Build and test a default site</h2></header><p>Download and unzip Prepress. Open Terminal. Change directory to “prepress”. To build your site, run the following command:</p><figure><pre>
 python3 prepress.py
-</pre></figure><p>To start a local test server, run:</p><figure><pre>
+</pre></figure><p>In another Terminal window, change directory to “site” and run:</p><figure><pre>
 python3 -m http.server
 </pre></figure><p>To test your site, open your browser and go to:</p><figure><pre>
 localhost:8000
@@ -40,7 +40,7 @@ python3 prepress.py
 localhost:8000
 </pre></figure><p>You should see the changes you just made.</p><header><h2>Deploy your site to the web</h2></header><p>To publish your site to the web, just upload the contents of your “site” directory to the root directory on your hosting service.</p><p>If your site will be hosted in a sub-directory, specify the base relative to the root when you build.</p><figure><pre>
 python3 prepress.py /project_1/
-</pre></figure><header><h2>Or deploy your site to Github Pages</h2></header><p>Create an account at <a href="github.com">Github</a>.</p><p>Create a repository called:</p><figure><pre>
+</pre></figure><header><h2>Or deploy your site to Github Pages</h2></header><p>Create an account at <a href="github.com">Github</a>. Create a repository called:</p><figure><pre>
 username.github.io
 </pre></figure><p>replacing “username” with your actual github username.</p><p>Drag and drop the contents of your “site” directory into your repository on Github. Click commit.</p><p>Open a browser and go to:</p><figure><pre>
 https://username.github.io/
