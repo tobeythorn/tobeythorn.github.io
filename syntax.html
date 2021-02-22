@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    	<meta charset="utf-8"></meta>
-    	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    	<meta charset="utf-8"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     	<title>Protowrite Syntax</title>
-    	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"></link>
-    	<link rel="stylesheet" type="text/css" href="/static/css/theme.css"></link>
-		<link rel="stylesheet" type="text/css" href="{{ style }}"></link>
+    	<link rel="stylesheet" type="text/css" href="/static/css/reset.css"/>
+    	<link rel="stylesheet" type="text/css" href="/static/css/basic.css"/>
     </head>
 	<body>
 		<header class="masthead">
@@ -17,12 +16,15 @@
 		</nav>
 		<main>
 			<article>
-				<header><h1>The Protowrite syntax</h1></header><header><h2>Introduction</h2></header><p>People who have used lighweight markup languges such as Markdown might be shocked that Protowrite has virtually no markup. A Protowrite document contains only the exact words and symbols the author wishes to communicate. The one and only exception is the use of square brackets to to specify links.</p><p>The other aspect that might come as a surprise is that Protowrite doesn't support elements like bold or italic. Protowrite asks authors to decide what something is, not what it looks like. This shifts the focus from “I want this to look bold” to “I want this to be a heading”.</p><p>This guide covers all features of the Protowrite syntax.</p><header><h2>Headings</h2></header><p>Level one headings begin with three or more blank lines. Level two headings begin with two blank lines. Optionally, you can include captions under either.</p><p>Protowrite:</p><figure><pre>
+				<header><h1>The Protowrite syntax</h1></header><header><h1>Introduction</h1></header><p>People who have used lighweight markup languges such as Markdown might be shocked that Protowrite plain text formatting has virtually no markup. This is possible because Protowrite uses space to indicate which parts of a document should be headings, figures, block quotes, lists, or code blocks. Visually, a Protowrite document contains only the exact words and symbols the author wishes to communicate. The one and only exception is the use of square brackets to to specify links.</p><p>I hope you find Protowrite formatting a joy to wite with. This guide covers all features.</p><header><h1>Headings</h1></header><p>Level one headings begin with many (four or more) blank lines. Level two headings begin with two or three blank lines. Optionally, you can include captions under either.</p><p>Protowrite:</p><figure><pre>
+
+
+
 
 
 
 Level one heading
-A subtitle
+A caption
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;header&gt;
 	&lt;h1&gt;Level one heading&lt;/h1&gt;
@@ -33,8 +35,9 @@ A subtitle
 </pre></figure><p>Protowrite:</p><figure><pre>
 
 
+
 Level two heading
-A subtitle
+A caption
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;header&gt;
 	&lt;h2&gt;Level two heading&lt;/h2&gt;
@@ -42,7 +45,7 @@ A subtitle
 		&lt;p&gt;A subtitle&lt;/p&gt;
 	&lt;/figcaption&gt;
 &lt;/header&gt;
-</pre></figure><header><h2>Paragraphs</h2></header><p>Paragraphs begin and end with blank lines, just like you'd expect.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Paragraphs</h1></header><p>Paragraphs begin and end with blank lines, just like you'd expect.</p><p>Protowrite:</p><figure><pre>
 
 The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
 
@@ -54,7 +57,7 @@ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the 
 
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;hr /&gt;
-</pre></figure><header><h2>Block quotes</h2></header><p>Block quotes are indicated by starting a line with a space. Optionally, you can add a caption for the quote.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Block quotes</h1></header><p>Block quotes are indicated by starting a line with a space. Optionally, you can add captions under the quote.</p><p>Protowrite:</p><figure><pre>
 
  Research your own experience; absorb what is useful, reject what is useless, and add what is essentially your own.
 Bruce Lee
@@ -70,7 +73,7 @@ Tao of Jeet Kune Do
 		&lt;p&gt;Tao of Jeet Kune Do&lt;/p&gt;
 	&lt;/figcaption&gt;
 &lt;/figure&gt;
-</pre></figure><header><h2>Code blocks</h2></header><p>Code blocks will be displayed as-is, preserving any whitespace. To create a code block, simply indent every line of code by one tab.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Code blocks</h1></header><p>Code blocks will be displayed as-is, preserving any whitespace. To create a code block, simply indent every line of code by one tab.</p><p>Protowrite:</p><figure><pre>
 
 	include &lt;stdio.h&gt;
 	function main(){
@@ -86,7 +89,7 @@ function main(){
 }
 &lt;/pre&gt;
 &lt;/figure&gt;
-</pre></figure><header><h2>Lists/Tables</h2></header><p>To make a list without markers, just write two or more lines of text separated by newlines. The output is an ordered list, because there's no such thing as an unordered list.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Lists and tables</h1></header><p>To make a list without markers, just write two or more lines of text separated by newlines. The output is an ordered list, because there's no such thing as an unordered list.</p><p>Protowrite:</p><figure><pre>
 
 Wake up
 Shower
@@ -104,7 +107,7 @@ Get dressed
 		&lt;span&gt;Get dressed&lt;/span&gt;
 	&lt;/li&gt;
 &lt;/ol&gt;
-</pre></figure><p>To make a list with markers, follow each marker by a single tab. Use extra spaces if you need to align the items.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><p>To make a list with markers, follow each marker by a single tab. Use extra spaces if you need to align the items. List markers are  content, as they should be.</p><p>Protowrite:</p><figure><pre>
 
 1.	Pen and paper
 2.	Typewriter
@@ -125,20 +128,20 @@ Get dressed
 		&lt;span&gt;Text editor&lt;/span&gt;
 	&lt;/li&gt;
 &lt;/ol&gt;
-</pre></figure><p>If you want real bullet points, use real bullet points, not asterisks.</p><figure><pre>
+</pre></figure><p>If you want real bullet points, use real bullet points, not asterisks.</p><p>Protowrite:</p><figure><pre>
 
 •	Read
 •	Write
 •	Edit
 
-</pre></figure><p>In fact, you can use any Unicode characters that you want for your list markers. Go crazy!</p><figure><pre>
+</pre></figure><p>In fact, you can use any Unicode characters that you want for your list markers. Go crazy!</p><p>Protowrite:</p><figure><pre>
 
 ♠	Poker
 ♣	Bridge
 ♥	Blackjack
 ♦	Rummy
 
-</pre></figure><p>Tables are just lists. Separate cells by single tabs. </p><p>Protowrite:</p><figure><pre>
+</pre></figure><p>Tables are just lists with additional cells in each row. Separate cells by single tabs. </p><p>Protowrite:</p><figure><pre>
 
 Selena	 Engineer	New York
 Justin	 Writer	        Lagos
@@ -162,13 +165,13 @@ Lily	 Manager	Moscow
 		&lt;span&gt;Moscow&lt;/span&gt;
 	&lt;/li&gt;
 &lt;/ol&gt;
-</pre></figure><header><h2>Citations</h2></header><p>Protowrite supports Vancouver style citation links. The citation IDs must be numbers and are enclosed in square brackets.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Citations</h1></header><p>Protowrite supports Vancouver style citation links. The citation IDs must be numbers and are enclosed in square brackets.</p><p>Protowrite:</p><figure><pre>
 
 Add Nineteen Eighty-Four [1] and The Machine Stops [2] to your reading list.
 
 </pre></figure><p>HTML output:</p><figure><pre>
 &lt;p&gt;Add Nineteen Eighty-Four &lt;a href="#[1]"&gt;[1]&lt;/a&gt; and The Machine Stops &lt;a href="#[2]"&gt;[2]&lt;/a&gt; to your reading list.&lt;/p&gt;
-</pre></figure><header><h2>A note about URLs</h2></header><p>All URLs must begin with http://, https://, or /.</p><header><h2>Links</h2></header><p>The syntax for web links also uses square brackets. Links follows the form [TEXT URL]. They can be included in paragraphs or lists.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h2>A note about URLs</h2></header><p>All URLs must begin with http://, https://, or /.</p><header><h1>Links</h1></header><p>The syntax for web links also uses square brackets. Links follows the form [TEXT URL]. They can be included in paragraphs or lists.</p><p>Protowrite:</p><figure><pre>
 
 I don't have [Instagram https://instagram.com] or [Facebook https://facebook.com].
 
@@ -200,7 +203,7 @@ This is a caption.
 		&lt;p&gt;This is a caption.&lt;/p&gt;
 	&lt;/figcaption&gt;
 &lt;/figure&gt;
-</pre></figure><header><h2>Citation references</h2></header><p>Citation references are just items in an ordinary marked list. Mark each citation with a ID number inside of square brackets.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Citation references</h1></header><p>Citation references are just items in an ordinary marked list. Mark each citation with a ID number inside of square brackets.</p><p>Protowrite:</p><figure><pre>
 
 [1]	George Orwell. Nineteen Eighty-Four. 1949.
 [2]	E. M. Forster. The Machine Stops. 1909.
@@ -216,7 +219,7 @@ This is a caption.
 		&lt;span&gt;E. M. Forster. The Machine Stops. 1909.&lt;/span&gt;
 	&lt;/li&gt;
 &lt;/ol&gt;	
-</pre></figure><header><h2>Escapes</h2></header><p>In rare cases, you may need escapes.</p><p>Protowrite:</p><figure><pre>
+</pre></figure><header><h1>Escapes</h1></header><p>In rare cases, you may need escapes.</p><p>Protowrite:</p><figure><pre>
 [L]
 [R]
 
