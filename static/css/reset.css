@@ -24,6 +24,8 @@ body
 	border-width: 1px;
     border-color: transparent;
     border-style: solid;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 body *
@@ -190,7 +192,7 @@ hr
 
 hr:after
 {
-    content: '⁂';      /* ✻ is also a great choice*/
+    content: '* * *';      /* ✻ is also a great choice*/
 }
 
 blockquote
